@@ -1,0 +1,5 @@
+dotenv
+langchain
+langchain_community
+crewai
+crewai_tools
