@@ -11,7 +11,7 @@ def reddit_scraper(subreddit: str, max_comments_per_post: int) -> str:
     You can provide the subreddit name and the maximum number of comments to retrieve per post.
     The tool will return a list of dictionaries, where each dictionary represents a post and contains the post
     title, URL, and a list of comments.
-    Example usage: run('python', 10)
+    Example usage: run('python', 10) don't use the r/ prefix
     """
     reddit = praw.Reddit(
         client_id=os.environ.get("REDDIT_CLIENT_ID"),
