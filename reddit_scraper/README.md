@@ -27,3 +27,4 @@ REDDIT_USER_AGENT=
 ### Tested with
 
 - [ollama/dolphin-mistral] (https://ollama.com/library/dolphin-mistral)
+- [ollama/dolphin-llama3] (https://ollama.com/library/dolphin-llama3)

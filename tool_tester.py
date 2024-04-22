@@ -9,22 +9,28 @@ load_dotenv()
 tool = reddit_scraper
 
 # Models
-OllamaDolphin = Ollama(model="dolphin-mistral")
+llm = Ollama(model="dolphin-llama3")
 
 tool_tester = Agent(
     role="CrewAi tool tester",
     goal="Test if the " + tool.name + " is working properly",
-    backstory="You are an agent that tests if the " + tool.name + " is working properly. Check if the " + tool.name + " you are provided with is working properly.",
+    backstory="You are an agent that tests if the "
+    + tool.name
+    + " is working properly. Check if the "
+    + tool.name
+    + " you are provided with is working properly.",
     verbose=True,
     history=True,
     tools=[tool],
-    llm=OllamaDolphin,
+    llm=llm,
 )
 
 
 test = Task(
-    description="See if the " + tool.name + " that is provided is working properly",
-    expected_output="A report on the number of tries it took to get the " + tool.name + " to work properly. Also the different errors encountered",
+    description="See if the " + tool.name + " that is provided is working technically",
+    expected_output="The number of tries it took to get the "
+    + tool.name
+    + " to work technically. If the tool is working properly, the output should be 1. If not, the output should be greater than 1 and the tool is not working with the current model.",
     agent=tool_tester,
 )
 
