@@ -16,18 +16,12 @@ You'll also need to obtain Reddit API credentials (client ID, client secret, and
 
 ### Usage
 
-To use the `RedditScraper` tool, create an instance of the `RedditScraper` class and pass in your Reddit API credentials:
+To use the `RedditScraper` tool, add the following environment variables to your `.env` file:
 
 ```python
-from reddit_scraper import RedditScraper
-
-redditScraper = RedditScraper(
-    client_id="your_client_id",
-    client_secret="your_client_secret",
-    user_agent="your_user_agent"
-)
-
-data = redditScraper.run(subreddit="python", max_comments_per_post=10)
+REDDIT_CLIENT_ID=
+REDDIT_CLIENT_SECRET=
+REDDIT_USER_AGENT=
 ```
 
 ### Tested with
