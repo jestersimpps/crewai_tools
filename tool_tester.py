@@ -9,7 +9,7 @@ load_dotenv()
 tool = reddit_scraper
 
 # Models
-llm = Ollama(model="dolphin-llama3")
+llm = Ollama(model="phi3")
 
 tool_tester = Agent(
     role="CrewAi tool tester",

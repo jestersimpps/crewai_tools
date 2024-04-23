@@ -26,5 +26,6 @@ REDDIT_USER_AGENT=
 
 ### Tested with
 
-- [ollama/dolphin-mistral] (https://ollama.com/library/dolphin-mistral)
-- [ollama/dolphin-llama3] (https://ollama.com/library/dolphin-llama3)
+- [ollama/dolphin-mistral] (https://ollama.com/library/dolphin-mistral) - works fine
+- [ollama/phi3] (https://ollama.com/library/phi3) - works fine
+- [ollama/dolphin-llama3] (https://ollama.com/library/dolphin-llama3) - not working, missing closing bracket
